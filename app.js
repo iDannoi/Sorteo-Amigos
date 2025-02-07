@@ -26,7 +26,6 @@ function actualizaListaDeAmigos() {
 }
 
 function sortearAmigo() {
-
     if (cantiadadAmigos == 0){
         let limpiaLista = document.getElementById("listaAmigos");
         limpiaLista.innerHTML = "";
@@ -39,5 +38,11 @@ function sortearAmigo() {
     listaHTML.innerHTML = `Tu amigo secreto es: ${amigosSecretos[amigoSorteado]}`;
     cantiadadAmigos = 0;
     amigosSecretos = [];
+    
 }
 
+function ReiniciarJuego() {
+    listaHTML = document.getElementById("resultado");
+    listaHTML.innerHTML = "";
+    actualizaListaDeAmigos();
+}
