@@ -169,3 +169,9 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+@media(max-width:1200px) {
+    .button-reset{
+        width: auto;
+    }
+}
