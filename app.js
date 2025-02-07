@@ -15,28 +15,14 @@ function agregarAmigo() {
     }
 }
 
-function actualizaListaDeAmigos(lista) {
-
-    let listaHTML = document.getElementById("listaAmigos");
-    listaHTML.innerHTML = "";
-
-    lista.forEach(elemento => {
-        const li = document.createElement("li");
-        li.textContent = elemento;
-        listaHTML.appendChild(li);
-    });
-}
-
-function actualizaListaDeAmigos(lista){
-    
-    let listaHTML = document.getElementById("listaAmigos");
-    listaHTML.innerHTML = "";
-    lista.forEach(elemento => {
-        const li = document.createElement("li");
-        li.textContent = elemento;
-        listaHTML.appendChild(li);
-        
-    });
+function actualizaListaDeAmigos() {
+    let listaElemento = document.getElementById("listaAmigos");
+    listaElemento.innerHTML = "";
+    amigosSecretos.forEach(Element=>{
+        const elementoNuevo = document.createElement("li");
+        elementoNuevo.textContent = Element;
+        listaElemento.appendChild(elementoNuevo);
+    })
 }
 
 function sortearAmigo() {
@@ -49,8 +35,9 @@ function sortearAmigo() {
     }
 
     let amigoSorteado =  Math.floor(Math.random()*cantiadadAmigos);
-    let listaHTML = document.getElementById("listaAmigos");
+    let listaHTML = document.getElementById("resultado");
     listaHTML.innerHTML = `Tu amigo secreto es: ${amigosSecretos[amigoSorteado]}`;
     cantiadadAmigos = 0;
     amigosSecretos = [];
 }
+
